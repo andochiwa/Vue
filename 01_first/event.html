@@ -8,7 +8,7 @@
 <body>
 
 <div id="app">
-    <button
+    <button v-on:click="sayHello">Click this</button>
 </div>
 
 <script>
@@ -17,7 +17,7 @@
         data: {
             message: "java"
         },
-        method: {
+        methods: {
             sayHello: function() {
                 alert(this.message);
             }

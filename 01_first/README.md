@@ -1,13 +1,27 @@
-# v-bind
+# Direct
+
+## v-bind
 
 v-bind等被称为指令。指令带有v-，表示它们是Vue提供的特殊特性。它们会在渲染的DOM上应用特殊的响应式行为
 
 v-bind可以绑定一个数据，当鼠标悬浮在上面时，会显示出数据内容
 
-# v-if, v-else
+## v-if, v-else
 
 Vue中的判断语句
 
-# v-for
+## v-for
 
 循环数组内容
+
+# v-model
+
+视图与数据进行双向绑定
+
+
+
+# Event
+
+通过methods添加事件
+
+通过`v-on:click`等绑定事件
