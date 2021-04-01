@@ -8,15 +8,29 @@
 <body>
 
 <div id="app">
+   <span v-bind:title="message">
+       hello
+   </span>
+
     <h1 v-if="ok==='A'">yes</h1>
     <h1 v-else>no</h1>
+
+    <li v-for="item in items">
+        {{item.message}}
+    </li>
 </div>
 
 <script>
     let vm = new Vue({
         el: "#app",
         data: {
-            ok: "A"
+            message: new Date().toLocaleDateString(),
+            ok: "A",
+            items: [
+                {message: "java"},
+                {message: "cpp"},
+                {message: "go"}
+            ]
         }
     });
 </script>

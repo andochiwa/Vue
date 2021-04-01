@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="../vue.js"></script>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 
+<div id="app">
+    <button
+</div>
+
+<script>
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            message: "java"
+        },
+        method: {
+            sayHello: function() {
+                alert(this.message);
+            }
+        }
+    })
+</script>
 </body>
 </html>
