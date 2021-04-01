@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../vue.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="example">
+    <p>Original message: "{{ message }}"</p>
+    <p>Computed reversed message: "{{ reversedMessage }}"</p>
+</div>
+
+<script>
+    let vm = new Vue({
+        el: '#example',
+        data: {
+            message: 'Hello'
+        },
+        // methods虽然也能实现，但是没有缓存
+        methods: {
+            reversedMessage: function () {
+                return this.message.split('').reverse().join('')
+            }
+        },
+        computed: {
+            // 计算属性的 getter
+            reversedMessage: function () {
+                // `this` 指向 vm 实例
+                return this.message.split('').reverse().join('')
+            }
+        }
+    })
+</script>
+</body>
+</html>
