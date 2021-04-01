@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="vue">
+    <div>{{info.name}}</div>
+    <div>{{info.address.street}}</div>
+    <a v-bind:href="info.url">跳到百度</a>
+</div>
+
+<script>
+    let vm = new Vue({
+        el: "#vue",
+        // json里的数据格式
+        data: {
+            info: {
+                name: null,
+                address: {
+                    street: null,
+                    city: null,
+                    country: null
+                },
+                url: null
+            }
+        },
+        mounted() { // 钩子函数 链式编程, 让json数据格式接受response里的json数据
+            axios.get('data.json').then(response => {console.log(this.info = response.data)})
+        }
+    })
+</script>
+</body>
+</html>
