@@ -1,5 +1,8 @@
 <template>
-  <h1>个人信息</h1>
+  <div>
+    <h1>个人信息</h1>
+    {{$route.params.id}}
+  </div>
 </template>
 
 <script>

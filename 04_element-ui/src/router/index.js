@@ -19,7 +19,8 @@ export default new VueRouter({
             component: Main, // 嵌套路由
             children: [
                 {
-                    path: "/user/UserProfile",
+                    path: "/user/UserProfile/:id", // 绑定一个id
+                    name: 'UserProfile',
                     component: UserProfile
                 },
                 {
