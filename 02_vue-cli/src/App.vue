@@ -2,6 +2,10 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+<!--  使用路由  -->
+    <router-link to="/main">首页</router-link>
+    <router-link to="/content">内容页</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
