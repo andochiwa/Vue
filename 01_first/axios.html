@@ -19,15 +19,7 @@
         el: "#vue",
         // json里的数据格式
         data: {
-            info: {
-                name: null,
-                address: {
-                    street: null,
-                    city: null,
-                    country: null
-                },
-                url: null
-            }
+            info: {}
         },
         mounted() { // 钩子函数 链式编程, 让json数据格式接受response里的json数据
             axios.get('data.json').then(response => {console.log(this.info = response.data)})
